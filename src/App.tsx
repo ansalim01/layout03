@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <div className="wrapper__container _container">
+        <div className="wrapper__container">
           <Routes>
             <Route index path="/" element={<Home isLoading={isLoading} />} />
             <Route path="/cart" element={<Cart />} />

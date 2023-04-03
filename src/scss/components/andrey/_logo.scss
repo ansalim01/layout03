@@ -1,0 +1,11 @@
+.logo {
+	display: block;
+	max-width: 156px;
+	max-height: 75px;
+	text-decoration: none;
+	&:active{opacity: .8;}
+	&__img {
+		display: block;
+		flex-shrink: 0;
+	}
+}

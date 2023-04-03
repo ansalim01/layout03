@@ -18,30 +18,32 @@ function Cart() {
 
   return (
     <div>
-      <Header></Header>
+      <Header crumbs={"Корзина"}></Header>
       <main className="main-basket">
-        <h1 className="main-basket__title">Корзина</h1>
-        <div className="main-basket__row basket-card">
-          {items.length === 0 ? (
-            <div className="information-window">{inforWindow}</div>
-          ) : (
-            items.map((i: any) => {
-              return <CartItem item={i}></CartItem>;
-            })
-          )}
-        </div>
-        <div className="main-basket__bottom">
-          {items.length === 0 ? (
-            <div></div>
-          ) : (
-            <MyButton
-              disabled
-              onClick={clearOnClick}
-              text={"Оформить заказ"}
-              st={"buttonTx"}
-            ></MyButton>
-          )}
-          <div className="main-basket__sum">{totalPrice} ₽</div>
+        <div className="main__container _container">
+          <h1 className="main-basket__title">Корзина</h1>
+          <div className="main-basket__row basket-card">
+            {items.length === 0 ? (
+              <div className="information-window">{inforWindow}</div>
+            ) : (
+              items.map((i: any) => {
+                return <CartItem item={i}></CartItem>;
+              })
+            )}
+          </div>
+          <div className="main-basket__bottom">
+            {items.length === 0 ? (
+              <div></div>
+            ) : (
+              <MyButton
+                disabled
+                onClick={clearOnClick}
+                text={"Оформить заказ"}
+                st={"buttonTx"}
+              ></MyButton>
+            )}
+            <div className="main-basket__sum">{totalPrice} ₽</div>
+          </div>
         </div>
       </main>
 

@@ -105,4 +105,38 @@
             color: #111111;
         }
     }
+
+    &__bread-crumbs {}
+}
+
+.bread-crumbs {
+    display: flex;
+
+    a {
+        color: #3F4E65;
+
+    }
+
+    &__item {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 120%;
+        padding: 0 10px;
+        color: #3F4E65;
+    }
+
+    &__item:first-child {
+        padding: 0 10px 0 0;
+    }
+
+    &__item:last-child {
+        padding: 0 0 0 10px;
+        opacity: 0.5;
+    }
+
+    &__item:not(:last-child) {
+        border-right: 1px dashed rgba(63, 78, 101, 0.3);
+    }
 }

@@ -1,0 +1,74 @@
+.menu {
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		padding: 10px 0;
+		margin-right: 30px;
+		padding-right: 30px;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 49px;
+			background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233F4E651A' stroke-width='1' stroke-dasharray='2%2c 2' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+		}
+		&:last-child{
+			margin-right: 0;
+			padding-right: 0;
+			&:before{content: none;}
+		}
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: #3F4E65;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.5;
+		transition: all .25s ease-out;
+		&:hover{color: #111;}
+		&:active{opacity: .8;}
+	}
+}
+
+.footer-menu {
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {
+		display: block;
+		margin-bottom: 20px;
+		&:last-child{margin-bottom: 0;}
+	}
+	&__link {
+		color: #fff;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.5;
+		overflow: hidden;
+		transition: all .25s ease-out;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&:hover{
+			color: #FFC85E;
+		}
+		&:active{opacity: .8;}
+	}
+
+	@media only screen and (max-width: 1240px) {
+		&__link{font-size: 13px;}
+	}
+	@media only screen and (max-width: 768px) {
+		&__link{font-size: 12px;}
+	}
+}

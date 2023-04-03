@@ -88,9 +88,9 @@ function Home({ isLoading }: any) {
 
   return (
     <div>
-      <Header></Header>
+      <Header crumbs={"Косметика и гигиена"}></Header>
       <main className="main">
-        <div className="main__container">
+        <div className="main__container _container">
           <div className="main__product main-product">
             <div className="main-product__title">
               <h1>Косметика и гигиена</h1>

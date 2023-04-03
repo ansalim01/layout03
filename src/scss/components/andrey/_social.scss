@@ -1,0 +1,27 @@
+.social {
+
+	&--margin{margin-top: 20px;}
+
+	&__title {
+		color: #fff;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.5;	
+		margin-bottom: 10px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	&__item {
+		padding-top: 5px;
+		margin-right: 10px;
+		&:last-child{margin-right: 0;}
+	}
+	&__img {
+		display: block;
+		&:hover{transform: scale(1.1)}
+		&:active{transform: scale(1)}
+	}
+}
