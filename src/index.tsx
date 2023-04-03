@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 ///
-import { HashRouter } from "react-router-dom";
+import { HashRouter, BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store, { persistor } from "./redux/store";
@@ -16,7 +16,8 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <HashRouter basename="layout03">
+  // <HashRouter basename="layout03">
+  <BrowserRouter basename="layout03">
     <Provider store={store}>
       {/* - */}
       <PersistGate loading={"...Loag"} persistor={persistor}>
@@ -24,7 +25,8 @@ root.render(
       </PersistGate>
       {/* - */}
     </Provider>
-  </HashRouter>
+  </BrowserRouter>
+  // </HashRouter>
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
