@@ -33,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
+        aaaaaaaaa
         {/* <SeatchContext.Provider value={}> */}
         <div className="wrapper__container _container">
           <Routes>
