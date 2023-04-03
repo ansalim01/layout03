@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 ///
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store, { persistor } from "./redux/store";
@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Provider store={store}>
       {/* - */}
       <PersistGate loading={"...Loag"} persistor={persistor}>
@@ -25,7 +25,7 @@ root.render(
       </PersistGate>
       {/* - */}
     </Provider>
-  </BrowserRouter>
+  </HashRouter>
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
