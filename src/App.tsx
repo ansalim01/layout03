@@ -37,7 +37,6 @@ function App() {
             <Route index path="/" element={<Home isLoading={isLoading} />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/admin" element={<Admin />} />
-
             <Route path={"/product"}>
               <Route path={":id"} element={<Product />}></Route>
             </Route>

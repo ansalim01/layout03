@@ -14,6 +14,7 @@ function Header() {
           логор
         </Link>
         <nav className="header__menu menu">
+          <Link to={"/admin"}>ADMIN</Link>
           <ul className="menu__list">
             <li className="menu__item">
               <a href="" className="menu__link">
