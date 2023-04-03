@@ -248,7 +248,7 @@ function Header({ crumbs, crumLink }: any) {
                   </div>
                   <div className="connect__operator">
                     <img
-                      src="./img/andrey/operator.png"
+                      src="https://raw.githubusercontent.com/ansalim01/layout03/main/src/img/product/operator.png"
                       className="connect__operator-img"
                       alt=""
                     />
