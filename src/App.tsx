@@ -5,7 +5,7 @@ import "./App.css";
 import "./scss/app.scss";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import Product from "./pages/Product";
 import Admin from "./pages/Admin";
 import { useAppDispatch, useAppSelector } from "./types/hook";
@@ -34,19 +34,17 @@ function App() {
     <div className="App">
       <div className="wrapper">
         aaaaaaaaa
-        {/* <SeatchContext.Provider value={}> */}
         <div className="wrapper__container _container">
           <Routes>
-            <Route path="/" element={<Home isLoading={isLoading} />} />
+            <Route index path="/" element={<Home isLoading={isLoading} />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/admin" element={<Admin />} />
-            {/* <Route path="/product/:id" element={<Product />} /> */}
+
             <Route path={"product"}>
               <Route path={":id"} element={<Product />}></Route>
             </Route>
           </Routes>
         </div>
-        {/* </SeatchContext.Provider> */}
       </div>
     </div>
     // <div className="App">
