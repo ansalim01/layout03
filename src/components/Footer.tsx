@@ -74,11 +74,19 @@ function Footer() {
                   placeholder="Введите ваш E-mail"
                 />
                 <button className="search__btn">
-                  <img
-                    src="img/andrey/arr-right.svg"
-                    alt=""
+                  <svg
                     className="search__btn-icon"
-                  />
+                    width="8"
+                    height="15"
+                    viewBox="0 0 8 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 12.8571L5 7.5L0 2.14286L1 0L8 7.5L1 15L0 12.8571Z"
+                      fill="white"
+                    />
+                  </svg>
                 </button>
               </form>
             </article>
