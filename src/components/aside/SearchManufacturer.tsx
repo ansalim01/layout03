@@ -49,7 +49,7 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
           placeholder="Поиск..."
         />
         <div>
-          <img src="../../img/icon/lypa.svg" alt="" />
+          <img src="./img/icon/lypa.svg" alt="" />
         </div>
       </div>
       {sortable.map((item: any, index: number) => {
@@ -72,7 +72,7 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
       <div onClick={toggleShowAll} className="aside-manufacturer__label">
         <span>Показать все</span>
         <div className="aside-manufacturer__arrow">
-          <img src="../../img/icon/Polygon 5.svg" alt="" />
+          <img src="./img/icon/Polygon 5.svg" alt="" />
         </div>
       </div>
     </div>

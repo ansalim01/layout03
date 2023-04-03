@@ -66,9 +66,9 @@ function Product() {
             </div>
             <div className="main-product-item__volume">
               {productItem.sizeType === "кг" || productItem.sizeType === "г" ? (
-                <img src="../img/icon/box.svg" alt="" />
+                <img src="./img/icon/box.svg" alt="" />
               ) : (
-                <img src="../img/icon/whh_bottle.svg" alt="" />
+                <img src="./img/icon/whh_bottle.svg" alt="" />
               )}
               {productItem.sizes} {productItem.sizeType}
             </div>
@@ -94,7 +94,7 @@ function Product() {
                   text={"В КОРЗИНУ"}
                   st={"buttonTx"}
                 >
-                  <img src="../img/icon/shop.svg" alt="" />
+                  <img src="./img/icon/shop.svg" alt="" />
                 </MyButton>
               </div>
             </div>

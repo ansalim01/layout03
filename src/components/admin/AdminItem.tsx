@@ -36,9 +36,9 @@ function AdminItem({ item }: any) {
             <div className="main-admin__name">{item.name}</div>
             <div className="main-admin__volume">
               {item.sizeType === "кг" || item.sizeType === "г" ? (
-                <img src="../../img/icon/box.svg" alt="" />
+                <img src="./img/icon/box.svg" alt="" />
               ) : (
-                <img src="../../img/icon/whh_bottle.svg" alt="" />
+                <img src="./img/icon/whh_bottle.svg" alt="" />
               )}
               {item.sizes} {item.sizeType}
             </div>
@@ -47,10 +47,10 @@ function AdminItem({ item }: any) {
           <div className="main-admin__price">{item.price} ₽</div>
           <div className="main-admin__clear">
             <MyButton onClick={removeOnClick}>
-              <img src="../../img/icon/Basket.svg" alt="" />
+              <img src="./img/icon/Basket.svg" alt="" />
             </MyButton>
             <MyButton onClick={settingsOnClick}>
-              <img src="../../img/icon/settings-gear-svgrepo-com.svg" alt="" />
+              <img src="./img/icon/settings-gear-svgrepo-com.svg" alt="" />
             </MyButton>
           </div>
         </div>
