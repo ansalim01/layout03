@@ -16,10 +16,6 @@ export const cartSlices = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    // addItem(state, action) {
-    //     state.items.push(action.payload);
-    //     state.totalPrice = state.totalPrice + action.payload.price
-    // },
     addItem(state, action: PayloadAction<any>) {
       const findItem = state.items.find(
         (obj: any) => obj.id === action.payload.id

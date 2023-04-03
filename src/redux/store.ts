@@ -2,10 +2,6 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import filterSlices from "./slices/filterSlices";
 import cartSlices from "./slices/cartSlices";
 
-// const store = configureStore({
-//   reducer: { filterSlices, cartSlices },
-// });
-///
 import {
   persistStore,
   persistReducer,
@@ -43,8 +39,5 @@ const store = configureStore({
 export const persistor = persistStore(store);
 export default store;
 
-///
-
-// export default store;
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
