@@ -38,7 +38,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/admin" element={<Admin />} />
 
-            <Route path={"product"}>
+            <Route path={"/product"}>
               <Route path={":id"} element={<Product />}></Route>
             </Route>
           </Routes>

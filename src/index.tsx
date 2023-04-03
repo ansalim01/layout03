@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <HashRouter>
+  <HashRouter basename="layout03">
     <Provider store={store}>
       {/* - */}
       <PersistGate loading={"...Loag"} persistor={persistor}>
