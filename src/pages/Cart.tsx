@@ -26,8 +26,8 @@ function Cart() {
             {items.length === 0 ? (
               <div className="information-window">{inforWindow}</div>
             ) : (
-              items.map((i: any) => {
-                return <CartItem item={i}></CartItem>;
+              items.map((i: any, index: number) => {
+                return <CartItem key={index} item={i}></CartItem>;
               })
             )}
           </div>
