@@ -121,7 +121,7 @@ function Header({ crumbs, crumLink }: any) {
         <div className="_container">
           <div className="header__main-inner">
             <div className="header__main-general">
-              <a href="#" className="header__logo logo">
+              <Link to={"/"} className="header__logo logo">
                 <svg
                   className="logo__img"
                   width="156"
@@ -174,7 +174,7 @@ function Header({ crumbs, crumLink }: any) {
                     </clipPath>
                   </defs>
                 </svg>
-              </a>
+              </Link>
               <button className="btn btn--min-w btn--margin">
                 <span className="btn__container">
                   <span className="btn__text">Каталог</span>
@@ -461,6 +461,14 @@ function Header({ crumbs, crumLink }: any) {
         </div>
       </Link> */}
       {/* /// */}
+      <div className="bread-crumbs ">
+        <div className="bread-crumbs__item">
+          <Link to={"/"}>Главная</Link>
+        </div>
+        <div className="bread-crumbs__item">
+          <Link to={crumLink}>{crumbs}</Link>
+        </div>
+      </div>
     </header>
   );
 }
