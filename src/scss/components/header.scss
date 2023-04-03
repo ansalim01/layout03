@@ -1,61 +1,61 @@
-.header {
+// .header {
 
-    // .header__container
+//     // .header__container
 
-    &__container {}
+//     &__container {}
 
-    // .header__body
+//     // .header__body
 
-    &__body {
-        padding: 31px 0 28px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
+//     &__body {
+//         padding: 31px 0 28px 0;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         position: relative;
+//         z-index: 1;
+//     }
 
-    // .header__logos
+//     // .header__logos
 
-    &__logos {}
+//     &__logos {}
 
-    // .header__logo
+//     // .header__logo
 
-    &__logo {
-        width: 100%;
-        height: 100%;
-    }
+//     &__logo {
+//         width: 100%;
+//         height: 100%;
+//     }
 
-    // .header__menu
+//     // .header__menu
 
-    &__menu {}
+//     &__menu {}
 
-    // .header__buttons
-
-
+//     // .header__buttons
 
 
 
 
-    @media (max-width:625px) {
-        &__body {
-            flex-direction: column;
-        }
 
-        &__body>*:not(:last-child) {
-            margin-bottom: 30px;
-        }
 
-        &__logos {
-            width: 250px;
-        }
+//     @media (max-width:625px) {
+//         &__body {
+//             flex-direction: column;
+//         }
 
-        &__buttons>* {
-            width: 25px;
-            height: 25px;
-        }
-    }
-}
+//         &__body>*:not(:last-child) {
+//             margin-bottom: 30px;
+//         }
+
+//         &__logos {
+//             width: 250px;
+//         }
+
+//         &__buttons>* {
+//             width: 25px;
+//             height: 25px;
+//         }
+//     }
+// }
 
 .header-cart {
 

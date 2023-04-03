@@ -92,9 +92,9 @@ function Header({ crumbs, crumLink }: any) {
               <nav className="menu">
                 <ul className="menu__list">
                   <li className="menu__item">
-                    <a href="#" className="menu__link">
-                      О компании
-                    </a>
+                    <Link to={"/admin"} className="menu__link">
+                      Админ панель
+                    </Link>
                   </li>
                   <li className="menu__item">
                     <a href="#" className="menu__link">
