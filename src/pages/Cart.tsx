@@ -2,16 +2,14 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MyButton from "../components/UI/MyButton";
-// import { useSelector, useDispatch } from "react-redux";
+
 import { useAppDispatch, useAppSelector } from "../types/hook";
-import { addItem, removeItem, clearItem } from "../redux/slices/cartSlices";
+import { clearItem } from "../redux/slices/cartSlices";
 import CartItem from "../components/CartItem";
 function Cart() {
   const [inforWindow, setInforWindow] = React.useState("Корзина пуста");
   const dispatch = useAppDispatch();
-  const { totalPrice, itemsCount, items } = useAppSelector(
-    (state: any) => state.cart
-  );
+  const { totalPrice, items } = useAppSelector((state: any) => state.cart);
 
   function clearOnClick() {
     setInforWindow("Спасибо за заказ");
@@ -24,8 +22,6 @@ function Cart() {
       <main className="main-basket">
         <h1 className="main-basket__title">Корзина</h1>
         <div className="main-basket__row basket-card">
-          {/* <div className="information-window">Корзина пуста</div> */}
-          {/* <div className="information-window">Спасибо за заказ</div> */}
           {items.length === 0 ? (
             <div className="information-window">{inforWindow}</div>
           ) : (
