@@ -136,6 +136,12 @@
 
     padding: 20px 0 0 0;
 
+    @media (max-width:920px) {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
     &__img {
         flex: 1 0 45%;
         margin-right: 40px;
@@ -186,13 +192,30 @@
 
     &__line {
         display: flex;
+        justify-content: space-between;
         margin-bottom: 40px;
     }
 
     &__line :not(:last-child) {
-        margin-right: 40px;
+        // margin-right: 40px;
 
     }
+
+    @media (max-width:970px) {
+        &__line {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        &__line>:not(:last-child) {
+            margin-bottom: 40px;
+
+        }
+
+    }
+
 
     &__price {
         font-family: 'Inter';
@@ -200,8 +223,10 @@
         font-weight: 800;
         font-size: 30px;
         line-height: 130%;
-
         color: #111111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__counter {
@@ -211,6 +236,18 @@
         padding-left: 44px;
 
         height: 49px;
+    }
+
+    @media (max-width:970px) {
+        &__counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+
+            height: 49px;
+        }
+
     }
 
     &__reduce {
