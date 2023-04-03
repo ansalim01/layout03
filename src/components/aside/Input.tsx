@@ -25,10 +25,12 @@ function Input({ item, addCeget, inputText }: any) {
     addCeget(e, item);
   }
   return (
-    <div className="">
-      <label>
+    <div className="checkbox">
+      <label className="custom-checkbox">
         <input onChange={onChangeInput} checked={checked} type="checkbox" />
-        {item[0]} ({item[1]})
+        <span>
+          {item[0]} ({item[1]})
+        </span>
       </label>
     </div>
   );
