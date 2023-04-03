@@ -311,7 +311,7 @@ function Header({ crumbs, crumLink }: any) {
           <button className="burger">
             <span className="burger__line"></span>
           </button>
-          <a href="#" className="header__logo logo">
+          <Link to={"/"} className="header__logo logo">
             <svg
               width="97"
               height="41"
@@ -364,8 +364,8 @@ function Header({ crumbs, crumLink }: any) {
                 </clipPath>
               </defs>
             </svg>
-          </a>
-          <div className="cart">
+          </Link>
+          <Link to={"/cart"} className="cart">
             <svg
               className="cart__icon"
               width="23"
@@ -383,7 +383,7 @@ function Header({ crumbs, crumLink }: any) {
             <span className="cart__badge">
               <span className="cart__badge-text">3</span>
             </span>
-          </div>
+          </Link>
         </div>
         <div className="header-mobi__line">
           <button className="header-mobi__btn">
