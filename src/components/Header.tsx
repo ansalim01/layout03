@@ -13,6 +13,10 @@ function Header() {
         <Link to={"/"} className="header__logos">
           логор
         </Link>
+        <div className="header__bread-crumbs">
+          <div className="bread-crumbs__item">Главная</div>
+          <div className="bread-crumbs__item">Корзина</div>
+        </div>
         <nav className="header__menu menu">
           <ul className="menu__list">
             <li className="menu__item">
