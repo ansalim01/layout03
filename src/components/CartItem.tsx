@@ -39,9 +39,9 @@ function CartItem({ item }: any) {
         <div className="basket-card__body">
           <div className="basket-card__volume">
             {item.sizeType === "кг" || item.sizeType === "г" ? (
-              <img src={"../img/icon/box.svg"} alt="" />
+              <img src={"../../img/icon/box.svg"} alt="" />
             ) : (
-              <img src={"../img/icon/whh_bottle.svg"} alt="" />
+              <img src={"./img/icon/whh_bottle.svg"} alt="" />
             )}
             {item.sizes} {item.sizeType}
           </div>
