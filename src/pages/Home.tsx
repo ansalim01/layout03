@@ -8,14 +8,11 @@ import ProductBloc from "../components/ProductBloc/ProductBloc";
 import Sceleton from "../components/ProductBloc/Sceleton";
 import Sorting from "../components/Sorting";
 
-import axios from "axios";
-
 // import { useSelector, useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../types/hook";
 import {
   setCategoryId,
   setSortName,
-  setProductCard,
   setPriceMin,
   setPriceMax,
   setCheckboxManufacturer,
@@ -40,30 +37,6 @@ function Home({ isLoading }: any) {
   function addCategoriesActive(index: number) {
     dispatch(setCategoryId(index));
   }
-
-  // React.useEffect(() => {
-  //   setIsLoading(true);
-  //   // const order = sort.sortProperty.includes("-") ? "asc" : "desc";
-  //   // const sortBy = sort.sortProperty.replace("-", "");
-  //   // const category = categoryId > 0 ? `typeCare=${categoryId}` : "";
-  //   console.log(productCard);
-  //   if (productCard.length === 0) {
-  //     axios
-  //       .get(
-  //         `https://641c4d981a68dc9e4605ef50.mockapi.io/items?`
-  //         // ${category}&sortBy=${sortBy}&order=${order}
-  //         // ${category}&
-  //       )
-  //       .then((res) => {
-  //         dispatch(setProductCard(res.data));
-  //         // localStorage.setItem("poductListLS", res.data);
-  //         setIsLoading(false);
-  //       });
-  //   } else {
-  //     // dispatch(setProductCard(productCard));
-  //     setIsLoading(false);
-  //   }
-  // }, []);
 
   let items = productCard;
 

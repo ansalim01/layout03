@@ -35,7 +35,7 @@ function App() {
         aaaaaaaaa
         <div className="wrapper__container _container">
           <Routes>
-            <Route index path="/*" element={<Home isLoading={isLoading} />} />
+            <Route index path="/" element={<Home isLoading={isLoading} />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/admin" element={<Admin />} />
 
