@@ -38,9 +38,9 @@ function CartItem({ item }: any) {
         <div className="basket-card__body">
           <div className="basket-card__volume">
             {item.sizeType === "кг" || item.sizeType === "г" ? (
-              <img src="./img/icon/box.svg" alt="" />
+              <img src="../img/icon/box.svg" alt="" />
             ) : (
-              <img src="./img/icon/whh_bottle.svg" alt="" />
+              <img src="../img/icon/whh_bottle.svg" alt="" />
             )}
             {item.sizes} {item.sizeType}
           </div>
@@ -61,7 +61,7 @@ function CartItem({ item }: any) {
       <div className="basket-card__price">{item.price * item.count} ₽</div>
       <div className="basket-card__clear">
         <MyButton onClick={removeOnClick}>
-          <img src="./img/icon/Basket.svg" alt="" />
+          <img src="../img/icon/Basket.svg" alt="" />
         </MyButton>
       </div>
     </div>

@@ -23,9 +23,9 @@ function ProductBloc({ item }: any) {
         </div>
         <div className="card__volume">
           {item.sizeType === "кг" || item.sizeType === "г" ? (
-            <img src="./img/icon/box.svg" alt="" />
+            <img src="../../img/icon/box.svg" alt="" />
           ) : (
-            <img src="./img/icon/whh_bottle.svg" alt="" />
+            <img src="../../img/icon/whh_bottle.svg" alt="" />
           )}
           {item.sizes} {item.sizeType}
         </div>
@@ -50,7 +50,7 @@ function ProductBloc({ item }: any) {
           <div className="card__price">{item.price} ₽</div>
           <button onClick={onClickAdd} className="">
             <span>В КОРЗИНУ</span>
-            <img src="./img/icon/shop.svg" alt="" />
+            <img src="../../img/icon/shop.svg" alt="" />
           </button>
         </div>
       </div>

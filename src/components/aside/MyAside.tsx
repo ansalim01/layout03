@@ -64,7 +64,7 @@ function MyAside({ create }: any) {
               <span>Показать</span>
             </button>
             <button onClick={clearProductAside} className="aside__button-im">
-              <img src="./img/icon/Basket.svg" alt="" />
+              <img src="../../img/icon/Basket.svg" alt="" />
             </button>
           </div>
         </form>

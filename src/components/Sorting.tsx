@@ -35,7 +35,7 @@ function Sorting({ value, addActive }: any) {
           <b>Сортировка:</b>
           <span>{value.name}</span>
           <div className="sorting__arrow">
-            <img src="./img/icon/Polygon 5.svg" alt="" />
+            <img src="../img/icon/Polygon 5.svg" alt="" />
           </div>
         </div>
         {visiblePopup && (
