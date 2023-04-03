@@ -32,7 +32,6 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        aaaaaaaaa
         <div className="wrapper__container _container">
           <Routes>
             <Route index path="/" element={<Home isLoading={isLoading} />} />
