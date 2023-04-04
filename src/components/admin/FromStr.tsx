@@ -197,12 +197,12 @@ function FromStr({ item }: any) {
           <MyCheckboxStr
             name={"typeCare-1"}
             value={1}
-            text={"Уход за руками"}
+            text={"Уход за телом"}
           ></MyCheckboxStr>
           <MyCheckboxStr
             name={"typeCare-2"}
             value={2}
-            text={"Уход за ногами"}
+            text={"Уход за руками"}
           ></MyCheckboxStr>
           <MyCheckboxStr
             name={"typeCare-3"}
