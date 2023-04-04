@@ -1,6 +1,7 @@
 import React from "react";
 import AdminItem from "../components/admin/AdminItem";
 import Form from "../components/admin/From";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useAppSelector } from "../types/hook";
 
@@ -22,6 +23,7 @@ function Admin() {
           </div>
         </div>
       </main>
+      <Footer></Footer>
     </div>
   );
 }
