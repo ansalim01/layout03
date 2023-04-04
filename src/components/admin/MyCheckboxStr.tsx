@@ -12,10 +12,11 @@ function MyCheckboxStr({ name, value, addTypeCare, text }: any) {
   React.useEffect(() => {
     if (typeActiveSettings.includes(Number(value))) {
       setChecked(true);
-    } else if (!typeActiveSettings.includes(Number(value))) {
+      // if (!typeActiveSettings.includes(Number(value)))
+    } else {
       setChecked(false);
     }
-  }, []);
+  }, [typeActiveSettings]);
   function onChangeInput(e: any) {
     dispatch(pushTypeActiveSettings(value));
     setChecked(!checked);

@@ -21,6 +21,7 @@ function FromStr({ item }: any) {
   let { productCard, typeActiveSettings } = useAppSelector(
     (state: any) => state.filters
   );
+  console.log(item);
 
   const [formValu, setFormValu] = React.useState<any>({
     id: item.id,
