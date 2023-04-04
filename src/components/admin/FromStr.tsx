@@ -21,7 +21,6 @@ function FromStr({ item }: any) {
   let { productCard, typeActiveSettings } = useAppSelector(
     (state: any) => state.filters
   );
-  console.log(item);
 
   const [formValu, setFormValu] = React.useState<any>({
     id: item.id,
@@ -112,8 +111,6 @@ function FromStr({ item }: any) {
             className="form__select"
             value={formValu.sizeType}
             onChange={(e) => {
-              console.log(e.target.value);
-
               return setFormValu({ ...formValu, sizeType: e.target.value });
             }}
           >

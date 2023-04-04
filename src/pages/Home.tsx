@@ -80,7 +80,6 @@ function Home({ isLoading }: any) {
   });
 
   function testProduct(valueMinMax: any, checkboxTrue: any) {
-    console.log(valueMinMax, checkboxTrue);
     dispatch(setPriceMax(valueMinMax.max));
     dispatch(setPriceMin(valueMinMax.min));
     dispatch(setCheckboxManufacturer(checkboxTrue));

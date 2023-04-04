@@ -18,7 +18,6 @@ function Sorting({ value, addActive }: any) {
     function handleOutsideClick(e: any) {
       if (!e.composedPath().includes(sortRef.current)) {
         setVisiblePopup(false);
-        console.log(123);
       }
     }
 

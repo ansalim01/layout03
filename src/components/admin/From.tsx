@@ -64,10 +64,6 @@ function Form() {
     dispatch(addProductCard(formValu));
     dispatch(setTypeCareActive([0]));
     // setFormValu()
-
-    console.log(formValu);
-
-    console.log(formValu);
   }
   return (
     <div>
@@ -106,8 +102,6 @@ function Form() {
             className="form__select"
             value={formValu.sizeType}
             onChange={(e) => {
-              console.log(e.target.value);
-
               return setFormValu({ ...formValu, sizeType: e.target.value });
             }}
           >
