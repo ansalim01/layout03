@@ -381,7 +381,7 @@ function Header({ crumbs, crumLink }: any) {
             </svg>
 
             <span className="cart__badge">
-              <span className="cart__badge-text">3</span>
+              <span className="cart__badge-text">{itemsCount}</span>
             </span>
           </Link>
         </div>
