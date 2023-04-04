@@ -16,11 +16,6 @@ function App() {
   const dispatch = useAppDispatch();
   React.useEffect(() => {
     setIsLoading(true);
-    if (productCard.length !== 0) {
-      return;
-    }
-    console.log(productCard);
-    console.log(productCard.length);
     if (productCard.length === 0) {
       axios
         .get(`https://641c4d981a68dc9e4605ef50.mockapi.io/items?`)
