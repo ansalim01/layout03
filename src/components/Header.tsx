@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../types/hook";
 
 function Header({ crumbs, crumLink }: any) {
-  const { items, totalPrice, itemsCount } = useAppSelector(
-    (state: any) => state.cart
-  );
+  const { totalPrice, itemsCount } = useAppSelector((state: any) => state.cart);
   return (
     <header className="header">
       <div className="header__top-line">

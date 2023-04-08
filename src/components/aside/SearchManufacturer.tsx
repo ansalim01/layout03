@@ -1,7 +1,9 @@
 import React from "react";
 import Input from "./Input";
+import { useAppDispatch, useAppSelector } from "../../types/hook";
 
-function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
+function SearchManufacturer({ checkboxTrue, setCheckboxTrue }: any) {
+  const { productCard } = useAppSelector((state: any) => state.productSlices);
   const [showAll, setShowAll] = React.useState(true);
   const [inputText, setInputText] = React.useState("");
 
@@ -10,7 +12,7 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
   }
 
   let countManufacturer: any = {};
-  items.forEach(function (i: any) {
+  productCard.forEach(function (i: any) {
     countManufacturer[i.manufacturer] =
       (countManufacturer[i.manufacturer] || 0) + 1;
   });
@@ -23,7 +25,6 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
       return a[1] - b[1];
     })
     .reverse();
-
   sortable = sortable.filter((i: any) =>
     i[0].toLowerCase().includes(inputText.toLowerCase())
   );
@@ -47,6 +48,7 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
           onChange={searchManufacturer}
           type="text"
           placeholder="Поиск..."
+          data-testid="input"
         />
         <div>
           <svg
@@ -74,12 +76,6 @@ function SearchManufacturer({ items, checkboxTrue, setCheckboxTrue }: any) {
             addCeget={addCeget}
             inputText={inputText}
           ></Input>
-          // <div className="" key={index} item={sortable[index]}>
-          //   <label>
-          //     <input onChange={test} type="checkbox" />
-          //     {item[0]} ({item[1]})
-          //   </label>
-          // </div>
         );
       })}
       <div onClick={toggleShowAll} className="aside-manufacturer__label">

@@ -8,19 +8,19 @@ import { Route, Router, Routes } from "react-router-dom";
 import Product from "./pages/Product";
 import Admin from "./pages/Admin";
 import { useAppDispatch, useAppSelector } from "./types/hook";
-import axios from "axios";
-import { setProductCard } from "./redux/slices/filterSlices";
+import { setProductCard } from "./redux/slices/productSlices";
 function App() {
   const [isLoading, setIsLoading] = React.useState(true);
-  let { productCard } = useAppSelector((state: any) => state.filters);
+  let { productCard } = useAppSelector((state: any) => state.productSlices);
+
   const dispatch = useAppDispatch();
   React.useEffect(() => {
     setIsLoading(true);
     if (productCard.length === 0) {
-      axios
-        .get(`https://641c4d981a68dc9e4605ef50.mockapi.io/items?`)
-        .then((res) => {
-          dispatch(setProductCard(res.data));
+      fetch(`https://641c4d981a68dc9e4605ef50.mockapi.io/items?`)
+        .then((response) => response.json())
+        .then((result) => {
+          dispatch(setProductCard(result));
           setIsLoading(false);
         });
     } else {
@@ -29,7 +29,7 @@ function App() {
   }, [productCard]);
 
   return (
-    <div className="App">
+    <div data-testid="div-app" className="App">
       <div className="wrapper">
         <div className="wrapper__container">
           <Routes>
@@ -43,9 +43,6 @@ function App() {
         </div>
       </div>
     </div>
-    // <div className="App">
-
-    // </div>
   );
 }
 

@@ -1,14 +1,8 @@
 import React from "react";
-// import { useSelector, useDispatch } from "react-redux";
-import { useAppDispatch, useAppSelector } from "../../types/hook";
-// import {
-//   pushCheckboxManufacturer,
-//   filterCheckboxManufacturer,
-// } from "../../redux/slices/filterSlices";
 
+import { useAppDispatch, useAppSelector } from "../../types/hook";
 function Input({ item, addCeget, inputText }: any) {
   const [checked, setChecked] = React.useState(false);
-  const dispatch = useAppDispatch();
   const { checkboxManufacturer } = useAppSelector(
     (state: any) => state.filters
   );

@@ -1,21 +1,15 @@
 import React from "react";
 import MyButton from "../UI/MyButton";
 import { useAppDispatch, useAppSelector } from "../../types/hook";
-import {
-  addItem,
-  removeItem,
-  clearItem,
-  reduceItem,
-} from "../../redux/slices/cartSlices";
+import { removeItem } from "../../redux/slices/cartSlices";
 import {
   removeProductCard,
   setActiveSettings,
-} from "../../redux/slices/filterSlices";
+} from "../../redux/slices/productSlices";
 import FromStr from "./FromStr";
 
 function AdminItem({ item }: any) {
-  // const [open, setOpen] = React.useState(false);
-  let { activeSettings } = useAppSelector((state: any) => state.filters);
+  let { activeSettings } = useAppSelector((state: any) => state.productSlices);
   const dispatch = useAppDispatch();
   function removeOnClick() {
     dispatch(removeItem(item.id));
@@ -23,7 +17,6 @@ function AdminItem({ item }: any) {
   }
   function settingsOnClick() {
     dispatch(setActiveSettings(item.id));
-    // setOpen(!open);
   }
   return (
     <div className="main-admin__item">

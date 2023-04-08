@@ -1,17 +1,10 @@
 import React from "react";
-import axios from "axios";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 import MyButton from "../components/UI/MyButton";
-// import { useSelector, useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../types/hook";
-import {
-  addItem,
-  removeItem,
-  clearItem,
-  reduceItem,
-} from "../redux/slices/cartSlices";
+import { addItem, removeItem, reduceItem } from "../redux/slices/cartSlices";
 
 function Product() {
   const { id } = useParams();
@@ -20,17 +13,10 @@ function Product() {
   React.useEffect(() => {
     let results = productCard.filter((item: any) => item.id === Number(id));
     setProductItem(results[0]);
-    // axios
-    //   .get(`https://641c4d981a68dc9e4605ef50.mockapi.io/items?id=${id}`)
-    //   .then((res) => {
-    //     setProductItem(res.data[0]);
-    //   });
   }, [id]);
 
   const dispatch = useAppDispatch();
-  const { totalPrice, itemsCount, items } = useAppSelector(
-    (state: any) => state.cart
-  );
+  const { items } = useAppSelector((state: any) => state.cart);
 
   function reduceOnClick() {
     items.forEach((i: any) => {

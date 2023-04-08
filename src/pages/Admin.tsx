@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import { useAppSelector } from "../types/hook";
 
 function Admin() {
-  let { productCard } = useAppSelector((state: any) => state.filters);
+  let { productCard } = useAppSelector((state: any) => state.productSlices);
   return (
     <div className="">
       <Header crumbs={"Админка"}></Header>

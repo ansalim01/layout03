@@ -3,23 +3,15 @@ import MyCheckbox from "./MyCheckbox";
 import { useAppDispatch, useAppSelector } from "../../types/hook";
 
 import {
-  setCategoryId,
-  setSortName,
-  setProductCard,
-  setPriceMin,
-  setPriceMax,
-  setCheckboxManufacturer,
-  addProductCard,
-  setTypeCareActive,
   setTypeActiveSettings,
   settingsProductCard,
-} from "../../redux/slices/filterSlices";
+} from "../../redux/slices/productSlices";
 import MyCheckboxStr from "./MyCheckboxStr";
 
 function FromStr({ item }: any) {
   const dispatch = useAppDispatch();
   let { productCard, typeActiveSettings } = useAppSelector(
-    (state: any) => state.filters
+    (state: any) => state.productSlices
   );
 
   const [formValu, setFormValu] = React.useState<any>({
@@ -71,8 +63,6 @@ function FromStr({ item }: any) {
       return;
     }
     dispatch(settingsProductCard(formValu));
-
-    // dispatch(addProductCard(formValu));
   }
   return (
     <div>

@@ -8,7 +8,11 @@ function MyButton(props) {
     st = styles.buttonTx;
   }
   return (
-    <div className={styles.buttons} onClick={props.onClick}>
+    <div
+      data-testid="custom-button"
+      className={styles.buttons}
+      onClick={props.onClick}
+    >
       <button className={st}>
         <span>{props.text}</span>
         {props.children}

@@ -2,31 +2,17 @@ import React from "react";
 import Categories from "../Categories";
 import PriceInput from "./PriceInput";
 import SearchManufacturer from "./SearchManufacturer";
-
-// import { useSelector, useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../../types/hook";
-import {
-  setCategoryId,
-  setSortName,
-  setProductCard,
-  setPriceMax,
-  setPriceMin,
-  setCheckboxManufacturer,
-} from "../../redux/slices/filterSlices";
+import { setCategoryId } from "../../redux/slices/filterSlices";
 
 function MyAside({ create }: any) {
   const [valueMinMax, setValueMinMax] = React.useState({ min: 0, max: 10000 });
   const [checkboxTrue, setCheckboxTrue]: any = React.useState([]);
 
   const dispatch = useAppDispatch();
-  const {
-    categoryId,
-    sort,
-    priceMin,
-    priceMax,
-    checkboxManufacturer,
-    productCard,
-  } = useAppSelector((state: any) => state.filters);
+  const { categoryId, productCard } = useAppSelector(
+    (state: any) => state.filters
+  );
   function addCategoriesActive(index: number) {
     dispatch(setCategoryId(index));
   }
@@ -54,7 +40,6 @@ function MyAside({ create }: any) {
             <div className="aside-manufacturer__title">Производитель</div>
 
             <SearchManufacturer
-              items={productCard}
               checkboxTrue={checkboxTrue}
               setCheckboxTrue={setCheckboxTrue}
             ></SearchManufacturer>

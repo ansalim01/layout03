@@ -3,20 +3,13 @@ import MyCheckbox from "./MyCheckbox";
 import { useAppDispatch, useAppSelector } from "../../types/hook";
 
 import {
-  setCategoryId,
-  setSortName,
-  setProductCard,
-  setPriceMin,
-  setPriceMax,
-  setCheckboxManufacturer,
   addProductCard,
   setTypeCareActive,
-} from "../../redux/slices/filterSlices";
+} from "../../redux/slices/productSlices";
 
 function Form() {
   const dispatch = useAppDispatch();
-  let { productCard } = useAppSelector((state: any) => state.filters);
-
+  let { productCard } = useAppSelector((state: any) => state.productSlices);
   const [formValu, setFormValu] = React.useState<any>({
     imageUrl: "",
     name: "",
@@ -63,7 +56,6 @@ function Form() {
 
     dispatch(addProductCard(formValu));
     dispatch(setTypeCareActive([0]));
-    // setFormValu()
   }
   return (
     <div>
@@ -183,25 +175,21 @@ function Form() {
         <div className="form__item">
           <div className="form__label">Тип ухода</div>
           <MyCheckbox
-            // addTypeCare={addTypeCare}
             name={"typeCare-1"}
             value={1}
             text={"Уход за руками"}
           ></MyCheckbox>
           <MyCheckbox
-            // addTypeCare={addTypeCare}
             name={"typeCare-2"}
             value={2}
             text={"Уход за ногами"}
           ></MyCheckbox>
           <MyCheckbox
-            // addTypeCare={addTypeCare}
             name={"typeCare-3"}
             value={3}
             text={"Уход за лицом"}
           ></MyCheckbox>
           <MyCheckbox
-            // addTypeCare={addTypeCare}
             name={"typeCare-4"}
             value={4}
             text={"Уход за волосами"}
@@ -211,7 +199,6 @@ function Form() {
         <button type="submit" className="form__button">
           Отправить
         </button>
-        {/* onChange */}
       </form>
     </div>
   );

@@ -1,14 +1,11 @@
 import React from "react";
-
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-
 import ProductBloc from "../components/ProductBloc/ProductBloc";
 import Sceleton from "../components/ProductBloc/Sceleton";
 import Sorting from "../components/Sorting";
-
-// import { useSelector, useDispatch } from "react-redux";
+import FilterProduct from "../components/FilterProduct";
 import { useAppDispatch, useAppSelector } from "../types/hook";
 import {
   setCategoryId,
@@ -20,16 +17,8 @@ import {
 import MyAside from "../components/aside/MyAside";
 
 function Home({ isLoading }: any) {
-  // const [isLoading, setIsLoading] = React.useState(true);
   const dispatch = useAppDispatch();
-  let {
-    categoryId,
-    sort,
-    priceMin,
-    priceMax,
-    checkboxManufacturer,
-    productCard,
-  } = useAppSelector((state: any) => state.filters);
+  let { categoryId, sort } = useAppSelector((state: any) => state.filters);
 
   function addSortingActive(index: any) {
     dispatch(setSortName(index));
@@ -37,47 +26,8 @@ function Home({ isLoading }: any) {
   function addCategoriesActive(index: number) {
     dispatch(setCategoryId(index));
   }
-
-  let items = productCard;
-
-  items = React.useMemo(() => {
-    return productCard.filter((obj: any) => {
-      if (obj.typeCare.includes(categoryId)) {
-        return true;
-      }
-    });
-  }, [categoryId, productCard]);
-
-  if (priceMax !== 0) {
-    items = items.filter((obj: any) => {
-      if (obj.price > priceMin && obj.price < priceMax) {
-        return true;
-      }
-    });
-  }
-
-  if (checkboxManufacturer.length !== 0) {
-    items = items.filter((obj: any) => {
-      if (checkboxManufacturer.includes(obj.manufacturer)) {
-        return true;
-      }
-    });
-  }
-
-  items.sort((a: any, b: any) => {
-    switch (sort.sortProperty) {
-      case "name":
-        return a.name.localeCompare(b.name);
-      case "-name":
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      case "-price":
-        return a.price - b.price;
-      case "price":
-        return b.price - a.price;
-    }
-  });
+  //фильтрация продуков.
+  let items = FilterProduct();
 
   function testProduct(valueMinMax: any, checkboxTrue: any) {
     dispatch(setPriceMax(valueMinMax.max));
@@ -119,7 +69,6 @@ function Home({ isLoading }: any) {
           </div>
         </div>
       </main>
-
       <Footer></Footer>
     </div>
   );

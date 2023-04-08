@@ -1,20 +1,12 @@
 import React from "react";
 import MyButton from "../components/UI/MyButton";
-// import { useSelector, useDispatch } from "react-redux";
 import { useAppDispatch, useAppSelector } from "../types/hook";
 
-import {
-  addItem,
-  removeItem,
-  clearItem,
-  reduceItem,
-} from "../redux/slices/cartSlices";
+import { addItem, removeItem, reduceItem } from "../redux/slices/cartSlices";
 import { Link } from "react-router-dom";
 function CartItem({ item }: any) {
   const dispatch = useAppDispatch();
-  const { totalPrice, itemsCount, items } = useAppSelector(
-    (state: any) => state.cart
-  );
+  const { items } = useAppSelector((state: any) => state.cart);
   function removeOnClick() {
     dispatch(removeItem(item.id));
   }
@@ -87,14 +79,10 @@ function CartItem({ item }: any) {
             <div className="basket-card__name">{item.name}</div>
           </Link>
           <div className="basket-card__description">
-            {
-              // item.description
-              item.description.length > 350
-                ? item.description.slice(0, 350) + " ..."
-                : item.description + " ..."
-            }
+            {item.description.length > 350
+              ? item.description.slice(0, 350) + " ..."
+              : item.description + " ..."}
           </div>
-          {/* //// */}
         </div>
       </div>
       <div className="basket-card__but">

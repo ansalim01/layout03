@@ -3,11 +3,13 @@ import { useAppDispatch, useAppSelector } from "../../types/hook";
 import {
   pushTypeActiveSettings,
   setTypeActiveSettings,
-} from "../../redux/slices/filterSlices";
+} from "../../redux/slices/productSlices";
 
 function MyCheckboxStr({ name, value, addTypeCare, text }: any) {
   const [checked, setChecked] = React.useState(false);
-  const { typeActiveSettings } = useAppSelector((state: any) => state.filters);
+  const { typeActiveSettings } = useAppSelector(
+    (state: any) => state.productSlices
+  );
   const dispatch = useAppDispatch();
   React.useEffect(() => {
     if (typeActiveSettings.includes(Number(value))) {

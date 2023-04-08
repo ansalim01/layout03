@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useAppSelector } from "../types/hook";
 function Sorting({ value, addActive }: any) {
+  let { sort } = useAppSelector((state: any) => state.filters);
   const sortingList = [
     { name: "по цене (по убыванию)", sortProperty: "price" },
     { name: "по цене (по возрастанию)", sortProperty: "-price" },
@@ -30,9 +31,13 @@ function Sorting({ value, addActive }: any) {
   return (
     <div ref={sortRef} className="main-product__sorting sorting">
       <div className="sorting">
-        <div className="sorting__label" onClick={() => toggleVisiblePopup()}>
+        <div
+          className="sorting__label"
+          data-testid="toggle-btn"
+          onClick={() => toggleVisiblePopup()}
+        >
           <b>Сортировка:</b>
-          <span>{value.name}</span>
+          <span>{sort.name}</span>
           <div className="sorting__arrow">
             <svg
               width="7"
@@ -49,11 +54,11 @@ function Sorting({ value, addActive }: any) {
           </div>
         </div>
         {visiblePopup && (
-          <div className="sorting__popup">
+          <div data-testid="toggle-elem" className="sorting__popup">
             <ul>
               {sortingList.map((item: any, index: number) => (
                 <li
-                  className={item.name === value.name ? "active" : ""}
+                  className={item.name === sort.name ? "active" : ""}
                   onClick={() => addActive(item)}
                   key={`${item}_${index}`}
                 >

@@ -1,19 +1,12 @@
 import React from "react";
-// import { useSelector, useDispatch } from "react-redux";
 import { useAppDispatch } from "../../types/hook";
 import { Link } from "react-router-dom";
-import { addItem, removeItem, clearItem } from "../../redux/slices/cartSlices";
+import { addItem } from "../../redux/slices/cartSlices";
 
 function ProductBloc({ item }: any) {
-  // const [buttonClick, setButtonClick] = React.useState(true);
   const dispatch = useAppDispatch();
   const onClickAdd = () => {
-    // if (buttonClick) {
-    // }else{
-    //   dispatch(addItem(item));
-    // }
     dispatch(addItem(item));
-    // setButtonClick(!buttonClick);
   };
   return (
     <div className="main-product-body__item">
