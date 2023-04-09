@@ -43,7 +43,7 @@ function Product() {
         crumbs={productItem.name}
         crumLink={`/product/${productItem.id}`}
       ></Header>
-      <main className="main">
+      <main data-testid="test" className="main">
         <div className="main__container _container">
           <div className="main-product-item">
             <div className="main-product-item__img">
@@ -51,9 +51,7 @@ function Product() {
             </div>
             <div className="main-product-item__body">
               <div className="main-product-item__status">В наличии</div>
-              <div className="main-product-item__name">
-                BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот
-              </div>
+              <div className="main-product-item__name">{productItem.name}</div>
               <div className="main-product-item__volume">
                 {productItem.sizeType === "мл" ||
                 productItem.sizeType === "л" ? (

@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MyButton MyButton 1`] = `
+<div
+  class="buttons"
+  data-testid="custom-button"
+>
+  <button
+    class="buttonIm"
+  >
+    <span />
+  </button>
+</div>
+`;
+
 exports[`test app renders learn react link 1`] = `
 <div
   class="buttons"

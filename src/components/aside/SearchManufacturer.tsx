@@ -78,7 +78,11 @@ function SearchManufacturer({ checkboxTrue, setCheckboxTrue }: any) {
           ></Input>
         );
       })}
-      <div onClick={toggleShowAll} className="aside-manufacturer__label">
+      <div
+        data-testid="toggle-label"
+        onClick={toggleShowAll}
+        className="aside-manufacturer__label"
+      >
         <span>Показать все</span>
         <div className="aside-manufacturer__arrow">
           <svg

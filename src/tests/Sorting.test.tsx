@@ -1,13 +1,13 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Sorting from "./Sorting";
+import Sorting from "../components/Sorting";
 import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 jest.mock("axios");
 
-describe("test", () => {
-  test("click event", () => {
+describe("Sorting", () => {
+  test("Проверка отрисовку сортировки", () => {
     render(
       <MemoryRouter>
         <Provider store={store}>

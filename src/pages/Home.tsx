@@ -18,7 +18,9 @@ import MyAside from "../components/aside/MyAside";
 
 function Home({ isLoading }: any) {
   const dispatch = useAppDispatch();
-  let { categoryId, sort } = useAppSelector((state: any) => state.filters);
+  let { categoryId, sort, priceMin, priceMax, checkboxManufacturer } =
+    useAppSelector((state: any) => state.filters);
+  let { productCard } = useAppSelector((state: any) => state.productSlices);
 
   function addSortingActive(index: any) {
     dispatch(setSortName(index));
@@ -27,7 +29,14 @@ function Home({ isLoading }: any) {
     dispatch(setCategoryId(index));
   }
   //фильтрация продуков.
-  let items = FilterProduct();
+  let items = FilterProduct({
+    productCard,
+    categoryId,
+    priceMin,
+    priceMax,
+    sort,
+    checkboxManufacturer,
+  });
 
   function testProduct(valueMinMax: any, checkboxTrue: any) {
     dispatch(setPriceMax(valueMinMax.max));

@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer data-testId="footerDiv" className="footer">
       <div className="_container">
         <div className="footer__container">
           <div className="footer__col">
@@ -240,7 +240,7 @@ function Footer() {
           <div className="footer__col">
             <h4 className="footer__title">Контакты:</h4>
 
-            <div className="f-contacts">
+            <div data-testid="footerContacts" className="f-contacts">
               <div className="f-contacts__item">
                 <a href="tel:+77774900091" className="f-contacts__link">
                   +7 (777) 490-00-91

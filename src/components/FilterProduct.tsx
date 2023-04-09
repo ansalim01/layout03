@@ -1,11 +1,15 @@
-import React from "react";
+// import React from "react";
+import React, { Component } from "react";
 import { useAppDispatch, useAppSelector } from "../types/hook";
 
-function FilterProduct() {
-  let { categoryId, sort, priceMin, priceMax, checkboxManufacturer } =
-    useAppSelector((state: any) => state.filters);
-  let { productCard } = useAppSelector((state: any) => state.productSlices);
-
+function FilterProduct({
+  productCard,
+  categoryId,
+  priceMin,
+  priceMax,
+  sort,
+  checkboxManufacturer,
+}: any) {
   let items = productCard;
   items = React.useMemo(() => {
     return productCard.filter((obj: any) => {

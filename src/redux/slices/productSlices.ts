@@ -40,8 +40,8 @@ export const productSlices = createSlice({
     setIsLoading(state, action: PayloadAction<Boolean>) {
       state.productCard = action.payload;
     },
-    addProductCard(state, action: PayloadAction<any>) {
-      const a = action.payload;
+    addProductCard(state, action: any) {
+      let a = action.payload;
       a.id = state.productCard[state.productCard.length - 1].id + 1;
       a.barcode = state.productCard[state.productCard.length - 1].id + 1;
       a.typeCare = state.typeCareActive;

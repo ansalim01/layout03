@@ -24,7 +24,9 @@ function Cart() {
           <h1 className="main-basket__title">Корзина</h1>
           <div className="main-basket__row basket-card">
             {items.length === 0 ? (
-              <div className="information-window">{inforWindow}</div>
+              <div data-testid="window" className="information-window">
+                {inforWindow}
+              </div>
             ) : (
               items.map((i: any, index: number) => {
                 return <CartItem key={index} item={i}></CartItem>;

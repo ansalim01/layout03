@@ -1,13 +1,13 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import SearchManufacturer from "./SearchManufacturer";
+import SearchManufacturer from "../components/aside/SearchManufacturer";
 import { MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "../../redux/store";
+import store from "../redux/store";
 jest.mock("axios");
 
-describe("test input", () => {
-  test("input", () => {
+describe("SearchManufacturer", () => {
+  test("Проверка inputa", () => {
     render(
       <MemoryRouter>
         <Provider store={store}>
@@ -23,6 +23,5 @@ describe("test input", () => {
       target: { value: "test" },
     });
     expect(screen.getByTestId("input")).toContainHTML("test");
-    // expect(linkElement).toMatchSnapshot();
   });
 });
