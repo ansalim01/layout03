@@ -11,8 +11,8 @@ function Product() {
   const [productItem, setProductItem]: any = React.useState({});
   let { productCard } = useAppSelector((state: any) => state.productSlices);
   React.useEffect(() => {
-    console.log(productCard);
     let results = productCard.filter((item: any) => item.id === Number(id));
+    console.log(productCard);
     setProductItem(results[0]);
   }, [id]);
 
