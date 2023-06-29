@@ -9,8 +9,9 @@ import { addItem, removeItem, reduceItem } from "../redux/slices/cartSlices";
 function Product() {
   const { id } = useParams();
   const [productItem, setProductItem]: any = React.useState({});
-  let { productCard } = useAppSelector((state: any) => state.filters);
+  let { productCard } = useAppSelector((state: any) => state.productSlices);
   React.useEffect(() => {
+    console.log(productCard);
     let results = productCard.filter((item: any) => item.id === Number(id));
     setProductItem(results[0]);
   }, [id]);
